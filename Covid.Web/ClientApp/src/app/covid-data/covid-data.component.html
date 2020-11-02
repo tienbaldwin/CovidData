@@ -1,0 +1,34 @@
+<div class="row" style="padding-bottom: 5px;">
+    <div class="col-sm-2">
+        <button kendoButton
+        (click)="GetCovidData()">Get Covid Data</button>
+    </div>
+    <div class="col-sm-8">
+    </div>
+    <div class="col-sm-2">
+        
+    </div>
+</div>
+
+<div class="grid-wrapper" *ngIf="selectedStates.length == 0 && showChartComponent == false"> 
+    <div *ngIf="isBusy" class="k-i-loading"></div>
+    <kendo-grid [data]="gridView" *ngIf="!isBusy">
+        <kendo-grid-checkbox-column></kendo-grid-checkbox-column>
+        <kendo-grid-column field="stateName" title="Name" width="170">
+        </kendo-grid-column>
+        <kendo-grid-column field="stateAbbreviation" title="Abbrev." width="100">
+        </kendo-grid-column>
+        <kendo-grid-column field="mostRecentNewCases" title="New Cases" width="120" format="{0:n0}">
+        </kendo-grid-column>
+        <kendo-grid-column field="mostRecentTotalCases" title="Total Cases" width="120" format="{0:n0}">
+        </kendo-grid-column>
+        <kendo-grid-column field="projectedTotalCases" title="Projected Total Cases" width="120" format="{0:n0}">
+        </kendo-grid-column>
+        <kendo-grid-column field="mostRecentNewDeaths" title="New Deaths" width="120" format="{0:n0}">
+        </kendo-grid-column>
+        <kendo-grid-column field="mostRecentTotalDeaths" title="Total Deaths" width="120" format="{0:n0}">
+        </kendo-grid-column>
+        <kendo-grid-column field="projectedTotalDeaths" title="Projected Total Deaths" width="120" format="{0:n0}">
+        </kendo-grid-column>
+    </kendo-grid>
+</div>
