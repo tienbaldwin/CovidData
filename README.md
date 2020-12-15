@@ -1,4 +1,4 @@
-This web application is written in Angular and DotNet Core. On the main page you will see the information about Covid new cases, new deaths daily and total cases for each states. 
+This web application is written in Angular, DotNet Core and Kendo UI. Currently, only the main page is completed. On this page you will see the information about Covid new cases, new deaths daily and total cases for each states. 
 Follow these steps to run the web application:
 1) Download and extract the source code.
 2) Open the command promp with administrator mode, change directory to the folder: "CovidData-master\Covid.Web\ClientApp", run the command "npm install".
